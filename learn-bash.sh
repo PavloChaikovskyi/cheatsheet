@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# https://learnxinyminutes.com/bash/
+
 #variable="Some text"
 #length=7
 #foo="Foo"
@@ -126,8 +128,8 @@ function login() {
 
 # login
 
-arr=(login $@)
-array=(one two three four five ${arr[@]})
+#arr=(login $@)
+#array=(one two three four five ${arr[@]})
 # echo ${arr[0]}
 
 #for i in $@; do echo $i; done #=> ONE LINE LOOP
@@ -143,26 +145,47 @@ array=(one two three four five ${arr[@]})
 # -le - less than or equal to
 # -ge - greater than or equal to
 #  =~ - test string against REGEX pattern
+#  -z empty 
+#  -n not empty
 
+#################################################################
+# PROCESSES
+#################################################################
+# sleep 30$ 
+# jobs
+# fg
+# bg
+# kill %1
 
+#################################################################
+# echo $(( 10 + 5 )) #=> expression 
+# Contents=$(cat file.txt) #=> 
+# $( ) #=> execute bash command inside
 
+# text=$( ls -la )
+# echo $text 
 
+# We can also read the file using `cat`:
+# Contents=$(cat file.txt)
+# "\n" prints a new line character
+# "-e" to interpret the newline escape characters as escape characters
+# echo -e "START OF FILE\n$Contents\nEND OF FILE"
+# => START OF FILE
+# => [contents of file.txt]
+# => END OF FILE
 
+# cp srcFile.txt clone.txt
+# cp -r srcDirectory/ dst/ # recursively copy
 
+# stdin  <  
+# stdout >
+# stderr 2> 
 
+# wc -l #=> count lines 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+for Output in ./*.sh
+do
+    echo "$Output"
+done
 
 
